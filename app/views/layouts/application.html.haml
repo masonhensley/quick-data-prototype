@@ -1,0 +1,41 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "Mason Hensley", :name => "author"}/
+    %meta{:content => "Mason Hensley Geodemo", :name => "keyword"}/
+    %title Geodemo
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+
+    %script{:src => "https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js"}
+    %link{:href => "https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css", :rel => "stylesheet"}/
+    = csrf_meta_tags
+    / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  %body
+    %section#container
+      / header start
+      =render partial: 'layouts/top_nav'
+      / sidebar start
+      =render partial: 'layouts/side_nav'
+      / main content start
+      %section#main-content
+        %section.wrapper.site-min-height
+          =render partial: 'layouts/messages'
+
+          = yield
+
+          =render partial: 'layouts/debug'
+      / /MAIN CONTENT
+
+      / footer start
+      =render partial: 'layouts/footer'
+    =javascript_include_tag params[:controller]
+    / script for this page
+    :javascript
+      //custom page js here
