@@ -1,0 +1,3 @@
+USER_NAME = "Mason Hensley"
+TEST_VAL1 ="DonecidelitnonmiportaCurabiturblandittempusporttitorssajustositametrisus"
+TEST_VAL2 ="Fuscedapibustellusaccursuscommodotortormauriscondimentumnibhutfermentumm"

@@ -11,3 +11,7 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 Rails.application.config.assets.precompile += %w( dashboards.js )
+Rails.application.config.assets.precompile += %w( chartjs-conf.js )
+Rails.application.config.assets.precompile += %w( chartjs.js )
+Rails.application.config.assets.precompile += %w( morris-conf.js )
+Rails.application.config.assets.precompile += %w( morris.css )

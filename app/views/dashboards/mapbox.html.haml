@@ -1,0 +1,16 @@
+%script{:src => "https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js"}
+%link{:href => "https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css", :rel => "stylesheet"}/
+
+= render partial: 'dashboards/display_nav'
+
+#map
+
+:javascript
+  $( document ).ready(function(){
+    console.log("hello mapbox");
+    L.mapbox.accessToken = "#{@mapbox_api_key}";
+    L.mapbox.map('map', 'masonhensley.mnk9ja6l');
+  });
+
+:css
+  #map { position:relative; top:0; bottom:0; width:100%; height:500px; }

@@ -1,0 +1,44 @@
+= render partial: 'dashboards/display_nav'
+%h3
+  %i.fa.fa-angle-right
+  Morris Charts
+/ page start
+#morris
+  .row.mt
+    .col-lg-6
+      .content-panel
+        %h4
+          %i.fa.fa-angle-right
+          Chart Example 1
+        .panel-body
+          #hero-graph.graph
+    .col-lg-6
+      .content-panel
+        %h4
+          %i.fa.fa-angle-right
+          Chart Example 2
+        .panel-body
+          #hero-bar.graph
+  .row.mt
+    .col-lg-6
+      .content-panel
+        %h4
+          %i.fa.fa-angle-right
+          Chart Example 3
+        .panel-body
+          #hero-area.graph
+    .col-lg-6
+      .content-panel
+        %h4
+          %i.fa.fa-angle-right
+          Chart Example 4
+        .panel-body
+          #hero-donut.graph
+/ page end
+/ /MAIN CONTENT
+%script{:src => "http://cdn.oesmith.co.uk/morris-0.4.3.min.js"}
+%script{:src => "//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"}
+
+= javascript_include_tag 'morris-conf'
+
+= stylesheet_link_tag    'morris', media: 'all', 'data-turbolinks-track' => true

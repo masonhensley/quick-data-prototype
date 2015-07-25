@@ -4,12 +4,23 @@
     %ul#nav-accordion.sidebar-menu
       %p.centered
         %a{:href => "profile.html"}
-          %img.img-circle{:src => "assets/ui-mason.png", :width => "60"}/
-      %h5.centered Mason Hensley
-      %li.mt
-        %a{:href => "index.html"}
-          %i.fa.fa-dashboard
-          %span Dashboard
+          %img.img-circle{:src => "/assets/ui-mason.png", :width => "60"}/
+      %h5.centered=current_user
+      -if !current_page?(root_url)
+        %li.mt
+          %a{:href => "/"}
+            %i.fa.fa-dashboard
+            %span Dashboard
+      / %li.sub-menu
+      /   %a{:href => "javascript:;"}
+      /     %i.fa.fa-bar-chart-o
+      /     %span Charts
+      /   %ul.sub
+      %li
+        %a{:href => "/display"} 
+          %i.fa.fa-desktop
+          %span Display
+    -#  
       %li.sub-menu
         %a{:href => "javascript:;"}
           %i.fa.fa-desktop
@@ -33,11 +44,11 @@
           %li
             %a{:href => "todo_list.html"} Todo List
       %li.sub-menu
-        %a.active{:href => "javascript:;"}
+        %a{:href => "javascript:;"}
           %i.fa.fa-book
           %span Extra Pages
         %ul.sub
-          %li.active
+          %li
             %a{:href => "blank.html"} Blank Page
           %li
             %a{:href => "login.html"} Login
@@ -65,8 +76,10 @@
           %span Charts
         %ul.sub
           %li
-            %a{:href => "morris.html"} Morris
+            %a{:href => "/morris"} Morris
           %li
-            %a{:href => "chartjs.html"} Chartjs
+            %a{:href => "/chartjs"} Chartjs
+          %li
+            %a{:href => "/mapbox"} Mapbox
     / sidebar menu end
 / sidebar end

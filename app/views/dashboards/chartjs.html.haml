@@ -1,0 +1,55 @@
+= render partial: 'dashboards/display_nav'
+%h3
+  %i.fa.fa-angle-right
+  Chartjs Charts
+/ page start
+#chartjs.tab-pane
+  .row.mt
+    .col-lg-6
+      .content-panel
+        %h4
+          %i.fa.fa-angle-right
+          Doughnut
+        .panel-body.text-center
+          %canvas#doughnut{:height => "300", :width => "400"}
+    .col-lg-6
+      .content-panel
+        %h4
+          %i.fa.fa-angle-right
+          Line
+        .panel-body.text-center
+          %canvas#line{:height => "300", :width => "400"}
+  .row.mt
+    .col-lg-6
+      .content-panel
+        %h4
+          %i.fa.fa-angle-right
+          Radar
+        .panel-body.text-center
+          %canvas#radar{:height => "300", :width => "400"}
+    .col-lg-6
+      .content-panel
+        %h4
+          %i.fa.fa-angle-right
+          Polar Area
+        .panel-body.text-center
+          %canvas#polarArea{:height => "300", :width => "400"}
+  .row.mt
+    .col-lg-6
+      .content-panel
+        %h4
+          %i.fa.fa-angle-right
+          Bar
+        .panel-body.text-center
+          %canvas#bar{:height => "300", :width => "400"}
+    .col-lg-6
+      .content-panel
+        %h4
+          %i.fa.fa-angle-right
+          Pie
+        .panel-body.text-center
+          %canvas#pie{:height => "300", :width => "400"}
+/ page end
+/ /MAIN CONTENT
+
+= javascript_include_tag 'chartjs-conf'

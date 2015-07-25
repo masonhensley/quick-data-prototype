@@ -1,0 +1,13 @@
+%br
+%div
+  / Nav tabs
+  %ul.nav.nav-pills
+    %li{class: is_active?(link="/")}
+      %a{href: link} Tables
+    %li{class: is_active?(link='/chartjs')}
+      %a{href: link} ChartJS
+    %li{class: is_active?(link='/morris')}
+      %a{href: link} Morris
+    %li{class: is_active?(link='/mapbox')}
+      %a{href: link} Mapbox
+%br

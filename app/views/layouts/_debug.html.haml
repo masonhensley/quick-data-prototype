@@ -2,5 +2,6 @@
 .row
   .col-md-12
     .panel
-      =current_user.inspect
-%hr
+      %h3 Debug Panel
+      =Rails.application.secrets.secret_key_base
+  %hr
